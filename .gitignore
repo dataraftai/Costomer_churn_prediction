@@ -1,0 +1,11 @@
+.ipynb
+.ipynb_checkpoints/
+__pycache__/
+myenv
+.venv/
+venv/
+env/
+ENV/
+*.csv
+*.log
+*.nbconvert.ipynb
