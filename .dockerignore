@@ -10,3 +10,8 @@ README.md
 .env
 images
 myenv
+csv 
+.DS_Store
+.vscode/
+.idea/
+
