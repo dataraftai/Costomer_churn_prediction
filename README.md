@@ -48,9 +48,10 @@ This model prioritizes high recall to capture maximum churn-prone users.
 Survival analysis helps understand **how long customers stay** before churning.
 
 ### 🔹 Customer Survival Over Time
-![Customer Survival Over Time](images\costomer-survival-over-time.png)
+![Customer Survival Over Time](images/costomer-survival-over-time.png)
 
 **Insight:**  
+
 This shows how customer survival decreases over time.
 Most churn happens in the early months, which highlights the importance of early engagement.
 ---
