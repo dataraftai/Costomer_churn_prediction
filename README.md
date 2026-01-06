@@ -51,10 +51,8 @@ Survival analysis helps understand **how long customers stay** before churning.
 ![Customer Survival Over Time](images/costomer-survival-over-time.png)
 
 **Insight:**  
-"This shows how customer survival decreases over time.
-Most churn happens in the early months, which highlights the importance of early engagement.
----
-
+“This shows how customer survival decreases over time.
+Most churn happens in the early months, which highlights the importance of early engagement.”
 
 ### 🔹 Average Churn Rate by Contract
 Customers with **month-to-month contracts** have a significantly higher churn rate compared to long-term contracts.
@@ -89,8 +87,7 @@ Fiber optic users show higher churn risk compared to DSL users.
 ![Survival by Internet Service](images/survival-by-monthly-charges.png)
 
 **Insight:**  
-Fiber optic users show higher churn risk compared to DSL users.
-“Fiber optic customers show higher churn compared to other services, possibly due to higher cost or service expectations.”
+Customers with higher monthly charges tend to churn faster, indicating price sensitivity or perceived value issues.”
 ```
 ```
 ## 📊 Exploratory Data Analysis (EDA)
