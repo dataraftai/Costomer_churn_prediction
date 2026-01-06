@@ -43,19 +43,62 @@ This model prioritizes high recall to capture maximum churn-prone users.
 
 ---
 
-## 📊 Exploratory Data Analysis (EDA)
+## ⏳ Survival Analysis (Kaplan–Meier)
+
+Survival analysis helps understand **how long customers stay** before churning.
+
+### 🔹 Customer Survival Over Time
+![Customer Survival Over Time](images\costomer-survival-over-time.png)
+
+**Insight:**  
+“This shows how customer survival decreases over time.
+Most churn happens in the early months, which highlights the importance of early engagement.”
+---
+
 
 ### 🔹 Average Churn Rate by Contract
 Customers with **month-to-month contracts** have a significantly higher churn rate compared to long-term contracts.
 
-![Average Churn Rate by Contract](images/avg_churn_by_contract.png)
+![Average Churn Rate by Contract](images\survival-by-contract-type.png)
+
+**Insight:**  
+“Month-to-month customers churn much earlier than customers on one-year or two-year contracts.
+This suggests long-term contracts help improve retention
 
 ---
+
+### 🔹 Survival by Payment Method
+![Survival by Payment Method](images\survival-by-payment-methode.png)
+
+**Insight:**  
+Electronic check users churn faster compared to other payment methods.
+Customers using electronic check tend to churn faster than those using automatic payment methods.
+This may be due to payment friction or missed payments.”
+
+---
+
+### 🔹 Survival by Internet Service
+![Survival by Internet Service](images\survival-by-internet-type.png)
+
+**Insight:**  
+Fiber optic users show higher churn risk compared to DSL users.
+“Fiber optic customers show higher churn compared to other services, possibly due to higher cost or service expectations.”
+
+---
+### 🔹 Survival by Monthly Charges (Binned)
+![Survival by Internet Service](images\survival-by-monthly-charges.png)
+
+**Insight:**  
+Fiber optic users show higher churn risk compared to DSL users.
+“Fiber optic customers show higher churn compared to other services, possibly due to higher cost or service expectations.”
+```
+```
+## 📊 Exploratory Data Analysis (EDA)
 
 ### 🔹 Confusion Matrix
 Shows how well the model distinguishes between churned and non-churned customers.
 
-![Confusion Matrix](images/confusion_matrix.png)
+![Confusion Matrix](images\confusion-matrix.png)
 
 **Insight:**
 - High true positives → good churn detection
@@ -63,12 +106,17 @@ Shows how well the model distinguishes between churned and non-churned customers
 
 ---
 
+### 🔹 Avarage Chrun by contract 
+
+![Top 10 Feature Importances](images\avg-churn-rate.png)
+
+
 ## ⭐ Feature Importance
 
 ### 🔹 Top 10 Feature Importances
 Identifies the most influential features driving churn predictions.
 
-![Top 10 Feature Importances](images/top_features.png)
+![Top 10 Feature Importances](images\ten-importent-feature.png)
 
 **Key Influential Features:**
 - Contract type
@@ -78,42 +126,6 @@ Identifies the most influential features driving churn predictions.
 - Internet service type
 
 📌 This improves **model interpretability** and business trust.
-
----
-
-## ⏳ Survival Analysis (Kaplan–Meier)
-
-Survival analysis helps understand **how long customers stay** before churning.
-
-### 🔹 Customer Survival Over Time
-![Customer Survival Over Time](images/customer_survival.png)
-
-**Insight:**  
-Customer survival probability decreases rapidly during the early months.
-
----
-
-### 🔹 Survival by Contract Type
-![Survival by Contract Type](images/survival_by_contract.png)
-
-**Insight:**  
-Customers with long-term contracts have significantly higher survival probability.
-
----
-
-### 🔹 Survival by Payment Method
-![Survival by Payment Method](images/survival_by_payment.png)
-
-**Insight:**  
-Electronic check users churn faster compared to other payment methods.
-
----
-
-### 🔹 Survival by Internet Service
-![Survival by Internet Service](images/survival_by_internet.png)
-
-**Insight:**  
-Fiber optic users show higher churn risk compared to DSL users.
 
 ---
 
@@ -158,29 +170,29 @@ Fiber optic users show higher churn risk compared to DSL users.
 ```
 
 ## 🔌 API Endpoints
-
+```
 ### 🏠 `GET /`
 Returns API welcome message and available endpoints.
-
+```
 
 ### 🩺 `GET /health`
 Health check for model and API.
-
+```
 json
 {
   "status": "ok",
   "version": "1.0.0",
   "model_loaded": true
 }
-
+```
 ### Sample Output
-
+```
 {
   "predicted": 1,
   "churn_label": "Churn",
   "churn_probability": 0.78
 }
-
+```
 ### 🐳 Docker Usage
 
 docker build -t <docker-username>/customer-churn-api .
