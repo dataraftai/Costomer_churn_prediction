@@ -131,4 +131,77 @@ Fiber optic users show higher churn risk compared to DSL users.
 ---
 
 ## 📁 Project Structure
+.
+├── app.py
+├── requirements.txt
+├── Dockerfile
+├── .dockerignore
+├── customer-churn-prediction.ipynb
+│
+├── model/
+│ ├── costomer_churn_pipeline.pkl
+│ └── predict.py
+│
+├── schema/
+│ ├── user_input_pydantic.py
+│ └── prediction_response.py
+│
+└── images/
+├── avg_churn_by_contract.png
+├── confusion_matrix.png
+├── top_features.png
+├── customer_survival.png
+├── survival_by_contract.png
+├── survival_by_payment.png
+└── survival_by_internet.png
+```
 
+
+---
+
+## 🔌 API Endpoints
+
+### 🏠 `GET /`
+Returns API welcome message and available endpoints.
+
+---
+
+### 🩺 `GET /health`
+Health check for model and API.
+
+```json
+{
+  "status": "ok",
+  "version": "1.0.0",
+  "model_loaded": true
+}
+```
+
+### Sample Output
+
+{
+  "predicted": 1,
+  "churn_label": "Churn",
+  "churn_probability": 0.78
+}
+
+### 🐳 Docker Usage
+
+docker build -t <docker-username>/customer-churn-api .
+docker run -p 8000:8000 <docker-username>/customer-churn-api
+
+### Swagger UI:
+
+http://localhost:8000/docs
+
+### 📌 Business Value
+
+- Identifies high-risk churn customers
+- Enables targeted retention strategies
+- Reduces revenue loss
+- Improves customer lifetime value (CLV)
+
+### 👩‍💻 Author
+
+Divya
+Aspiring Data Scientist / Machine Learning Engineer
