@@ -131,6 +131,7 @@ Fiber optic users show higher churn risk compared to DSL users.
 ---
 
 ## 📁 Project Structure
+```
 .
 ├── app.py
 ├── requirements.txt
@@ -156,26 +157,21 @@ Fiber optic users show higher churn risk compared to DSL users.
 └── survival_by_internet.png
 ```
 
-
----
-
 ## 🔌 API Endpoints
 
 ### 🏠 `GET /`
 Returns API welcome message and available endpoints.
 
----
 
 ### 🩺 `GET /health`
 Health check for model and API.
 
-```json
+json
 {
   "status": "ok",
   "version": "1.0.0",
   "model_loaded": true
 }
-```
 
 ### Sample Output
 
