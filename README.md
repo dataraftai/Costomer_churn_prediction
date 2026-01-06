@@ -1,0 +1,134 @@
+# 📉 Customer Churn Prediction & Survival Analysis API
+
+An end-to-end Machine Learning project that predicts whether a telecom customer is likely to churn and provides business insights using **EDA, Feature Importance, Confusion Matrix, and Survival Analysis**.  
+The trained model is deployed as a **FastAPI REST API** and containerized using **Docker**.
+
+---
+
+## 🚀 Project Overview
+
+Customer churn directly impacts revenue in the telecom industry.  
+This project helps identify customers who are likely to churn so companies can proactively retain them using targeted strategies.
+
+The project includes:
+- Exploratory Data Analysis (EDA)
+- Feature Importance analysis
+- Classification modeling
+- Survival analysis using Kaplan–Meier
+- REST API deployment
+- Dockerized production-ready setup
+
+---
+
+## 🧠 Model Performance
+
+```
+            precision    recall  f1-score   support
+
+           0       0.92      0.74      0.82      1035
+           1       0.53      0.81      0.64       374
+
+    accuracy                           0.76      1409
+   macro avg       0.72      0.78      0.73      1409
+weighted avg       0.81      0.76      0.77      1409
+```
+
+
+📌 **Why Recall Matters More Than Precision**  
+In churn prediction, missing a churner is more costly than incorrectly flagging a loyal customer.  
+This model prioritizes high recall to capture maximum churn-prone users.
+- **Accuracy:** ~76%
+- **Recall (Churn = 1):** ~81%
+- **Precision (Churn = 1):** ~53%
+
+---
+
+## 📊 Exploratory Data Analysis (EDA)
+
+### 🔹 Average Churn Rate by Contract
+Customers with **month-to-month contracts** have a significantly higher churn rate compared to long-term contracts.
+
+![Average Churn Rate by Contract](images/avg_churn_by_contract.png)
+
+---
+
+### 🔹 Confusion Matrix
+Shows how well the model distinguishes between churned and non-churned customers.
+
+![Confusion Matrix](images/confusion_matrix.png)
+
+**Insight:**
+- High true positives → good churn detection
+- Some false positives → acceptable tradeoff for retention strategy
+
+---
+
+## ⭐ Feature Importance
+
+### 🔹 Top 10 Feature Importances
+Identifies the most influential features driving churn predictions.
+
+![Top 10 Feature Importances](images/top_features.png)
+
+**Key Influential Features:**
+- Contract type
+- Tenure
+- Monthly charges
+- Payment method
+- Internet service type
+
+📌 This improves **model interpretability** and business trust.
+
+---
+
+## ⏳ Survival Analysis (Kaplan–Meier)
+
+Survival analysis helps understand **how long customers stay** before churning.
+
+### 🔹 Customer Survival Over Time
+![Customer Survival Over Time](images/customer_survival.png)
+
+**Insight:**  
+Customer survival probability decreases rapidly during the early months.
+
+---
+
+### 🔹 Survival by Contract Type
+![Survival by Contract Type](images/survival_by_contract.png)
+
+**Insight:**  
+Customers with long-term contracts have significantly higher survival probability.
+
+---
+
+### 🔹 Survival by Payment Method
+![Survival by Payment Method](images/survival_by_payment.png)
+
+**Insight:**  
+Electronic check users churn faster compared to other payment methods.
+
+---
+
+### 🔹 Survival by Internet Service
+![Survival by Internet Service](images/survival_by_internet.png)
+
+**Insight:**  
+Fiber optic users show higher churn risk compared to DSL users.
+
+---
+
+## 🏗️ Tech Stack
+
+- **Python**
+- **Pandas, NumPy**
+- **Scikit-learn**
+- **Matplotlib, Seaborn**
+- **Lifelines (Kaplan–Meier Survival Analysis)**
+- **FastAPI**
+- **Docker**
+- **Joblib**
+
+---
+
+## 📁 Project Structure
+
