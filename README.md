@@ -51,8 +51,7 @@ Survival analysis helps understand **how long customers stay** before churning.
 ![Customer Survival Over Time](images/costomer-survival-over-time.png)
 
 **Insight:**  
-
-This shows how customer survival decreases over time.
+"This shows how customer survival decreases over time.
 Most churn happens in the early months, which highlights the importance of early engagement.
 ---
 
@@ -202,6 +201,7 @@ You can directly pull and run the API image from Docker Hub:
 🔗 Docker Hub Repository:
 https://hub.docker.com/r/dataforai/churn-prediction-api
 
+[![Docker Pulls](https://img.shields.io/docker/pulls/dataforai/churn-prediction-api)]
 
 ## 🐳 Run with Docker
 
@@ -210,9 +210,6 @@ docker pull dataforai/churn-prediction-api:latest
 
 ### Run Container
 docker run -p 8000:8000 dataforai/churn-prediction-api:latest
-
-[![Docker Pulls](https://img.shields.io/docker/pulls/dataforai/churn-prediction-api)]
-
 
 ### Swagger UI:
 
