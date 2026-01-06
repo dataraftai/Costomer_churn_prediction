@@ -60,7 +60,7 @@ Most churn happens in the early months, which highlights the importance of early
 ### 🔹 Average Churn Rate by Contract
 Customers with **month-to-month contracts** have a significantly higher churn rate compared to long-term contracts.
 
-![Average Churn Rate by Contract](images\survival-by-contract-type.png)
+![Average Churn Rate by Contract](images/survival-by-contract-type.png)
 
 **Insight:**  
 “Month-to-month customers churn much earlier than customers on one-year or two-year contracts.
@@ -69,7 +69,7 @@ This suggests long-term contracts help improve retention
 ---
 
 ### 🔹 Survival by Payment Method
-![Survival by Payment Method](images\survival-by-payment-methode.png)
+![Survival by Payment Method](images/survival-by-payment-methode.png)
 
 **Insight:**  
 Electronic check users churn faster compared to other payment methods.
@@ -79,7 +79,7 @@ This may be due to payment friction or missed payments.”
 ---
 
 ### 🔹 Survival by Internet Service
-![Survival by Internet Service](images\survival-by-internet-type.png)
+![Survival by Internet Service](images/survival-by-internet-type.png)
 
 **Insight:**  
 Fiber optic users show higher churn risk compared to DSL users.
@@ -87,7 +87,7 @@ Fiber optic users show higher churn risk compared to DSL users.
 
 ---
 ### 🔹 Survival by Monthly Charges (Binned)
-![Survival by Internet Service](images\survival-by-monthly-charges.png)
+![Survival by Internet Service](images/survival-by-monthly-charges.png)
 
 **Insight:**  
 Fiber optic users show higher churn risk compared to DSL users.
@@ -99,7 +99,7 @@ Fiber optic users show higher churn risk compared to DSL users.
 ### 🔹 Confusion Matrix
 Shows how well the model distinguishes between churned and non-churned customers.
 
-![Confusion Matrix](images\confusion-matrix.png)
+![Confusion Matrix](images/confusion-matrix.png)
 
 **Insight:**
 - High true positives → good churn detection
@@ -109,7 +109,7 @@ Shows how well the model distinguishes between churned and non-churned customers
 
 ### 🔹 Avarage Chrun by contract 
 
-![Top 10 Feature Importances](images\avg-churn-rate.png)
+![Top 10 Feature Importances](images/avg-churn-rate.png)
 
 
 ## ⭐ Feature Importance
@@ -117,7 +117,7 @@ Shows how well the model distinguishes between churned and non-churned customers
 ### 🔹 Top 10 Feature Importances
 Identifies the most influential features driving churn predictions.
 
-![Top 10 Feature Importances](images\ten-importent-feature.png)
+![Top 10 Feature Importances](images/ten-importent-feature.png)
 
 **Key Influential Features:**
 - Contract type
@@ -194,10 +194,22 @@ json
   "churn_probability": 0.78
 }
 ```
-### 🐳 Docker Usage
 
-docker build -t <docker-username>/customer-churn-api .
-docker run -p 8000:8000 <docker-username>/customer-churn-api
+## 🐳 Docker Hub
+
+You can directly pull and run the API image from Docker Hub:
+
+🔗 Docker Hub Repository:
+https://hub.docker.com/r/dataforai/churn-prediction-api
+
+
+## 🐳 Run with Docker
+
+### Pull Image
+docker pull dataforai/churn-prediction-api:latest
+
+### Run Container
+docker run -p 8000:8000 dataforai/churn-prediction-api:latest
 
 ### Swagger UI:
 
@@ -209,6 +221,9 @@ http://localhost:8000/docs
 - Enables targeted retention strategies
 - Reduces revenue loss
 - Improves customer lifetime value (CLV)
+
+[![Docker Pulls](https://img.shields.io/docker/pulls/dataforai/churn-prediction-api)](https://hub.docker.com/r/dataforai/churn-prediction-api)
+
 
 ### 👩‍💻 Author
 
