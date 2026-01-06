@@ -211,6 +211,9 @@ docker pull dataforai/churn-prediction-api:latest
 ### Run Container
 docker run -p 8000:8000 dataforai/churn-prediction-api:latest
 
+[![Docker Pulls](https://img.shields.io/docker/pulls/dataforai/churn-prediction-api)]
+
+
 ### Swagger UI:
 
 http://localhost:8000/docs
@@ -221,9 +224,6 @@ http://localhost:8000/docs
 - Enables targeted retention strategies
 - Reduces revenue loss
 - Improves customer lifetime value (CLV)
-
-[![Docker Pulls](https://img.shields.io/docker/pulls/dataforai/churn-prediction-api)](https://hub.docker.com/r/dataforai/churn-prediction-api)
-
 
 ### 👩‍💻 Author
 
